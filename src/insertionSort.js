@@ -2,7 +2,7 @@ function insertionSort(arr) {
   // your code here!
   // arr is an array of unsorted integers (i.e. [3, 5, 1])
   let previousIndex;
-
+  console.log(arr)
   for (let index = 0; index < arr.length; index++) {
     previousIndex = index -1;
     let swapped = true;
@@ -16,13 +16,13 @@ function insertionSort(arr) {
           arr[swapIndex] = temp;
           swapped = true;
         }else{
-          swapped = false;
+          if(swapIndex < 1) swapped = false;
         }
         swapIndex--;
-        if(swapIndex < 1) swapped = false;
         previousIndex = swapIndex -1;
       }
     }
   }
+  console.log(arr)
   return arr;
 }
